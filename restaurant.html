@@ -31,7 +31,7 @@
                             <span>Kosher Certified</span>
                         </p>
                     </div>
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    <button id="navbarToggle"type="button" class="navbar-toggle collapsed" data-toggle="collapse"
                         data-target="#collapsable-nav" aria-expanded="false">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
@@ -41,13 +41,13 @@
                 </div>
                 <div id="collapsable-nav" class="collapse navbar-collapse">
                     <ul id="nav-list" class="nav navbar-nav navbar-right">
-                        <li class="visible-xs active">
+                        <li id="navHomeButton" class="visible-xs active">
                             <a href="restaurant.html">
                                 <span class="glyphicon glyphicon-home"></span> Home
                             </a>
                         </li>
-                        <li>
-                            <a href="menu-categories.html">
+                        <li id="navMenuButton">
+                            <a href="#" onclick="$dc.loadMenuCategories();">
                                 <span class="glyphicon glyphicon-cutlery"></span>
                                 <br class="hidden-xs">Menu
                             </a>
@@ -86,36 +86,7 @@
     </div>
 
     <div id="main-content" class="container">
-        <div class="jumbotron">
-            <img src="images/jumbotron_768.jpg" alt="Picture of restaurant" class="img-responsive visible-xs">
-        </div>
-        <div id="home-tiles" class="row">
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <a href="menu-categories.html">
-                    <div id="menu-tile">
-                        <span>menu</span>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <a href="single-category.html">
-                    <div id="specials-tile">
-                        <span>specials</span>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4 col-sm-12 col-xs-12">
-                <a href="https://goo.gl/maps/3PxkKRSxhMjoDUkL9" target="_blank">
-                    <div id="map-tile">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3084.6752464053516!2d-76.71387678463584!3d39.363590279501345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c81a14e7817803%3A0xab20a0e99daa17ea!2sDavid%20Chu&#39;s%20China%20Bistro!5e0!3m2!1sen!2spl!4v1656506664572!5m2!1sen!2spl"
-                            width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        <span>map</span>
-                    </div>
-                </a>
-            </div>
-        </div> <!-- #home-tiles-->
+        
     </div> <!-- #main-content-->
 
     <footer class="panel-footer">
@@ -149,6 +120,7 @@
     <!-- jQuery (Bootstrap JS plugins depend on it) -->
     <script src="js/jquery-2.1.4.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/ajax-utils.js"></script>
     <script src="js/script.js"></script>
 </body>
 
